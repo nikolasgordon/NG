@@ -6,13 +6,13 @@ import Breadcrum from './component/breadcrum';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { HashRouter, Route, Switch} from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="d-flex align-items-center flex-column">
       <Name/>
       <div className="custom-div overflow-hidden position-absolute mt-5">
@@ -31,7 +31,7 @@ function App() {
       <Breadcrum/>
       <Footer/>
     </div>
-    </Router>
+    </HashRouter>
   );
 }
 
