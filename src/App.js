@@ -10,6 +10,7 @@ import { HashRouter, Route, Switch} from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//main app
 function App() {
   return (
     <HashRouter>
