@@ -6,25 +6,24 @@ import Breadcrum from './component/breadcrum';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import { HashRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//main app
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <div className="d-flex align-items-center flex-column">
       <Name/>
       <div className="custom-div overflow-hidden position-absolute mt-5">
         <Switch>
-            <Route exact path="/">
+            <Route exact path={process.env.PUBLIC_URL + "/"}>
             <Home/>
           </Route>
-          <Route exact path="/About">
+          <Route path={process.env.PUBLIC_URL + "/About"}>
             <About/>
           </Route>
-          <Route exact path="/Projects">
+          <Route  path={process.env.PUBLIC_URL + "/Projects"}>
             <Projects/>
           </Route>
         </Switch>
@@ -32,7 +31,7 @@ function App() {
       <Breadcrum/>
       <Footer/>
     </div>
-    </HashRouter>
+    </Router>
   );
 }
 
